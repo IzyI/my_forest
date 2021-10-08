@@ -1,0 +1,10 @@
+MOTOR1 = 12
+MOTOR2 = 13
+MOTOR3 = 14
+MOTOR4 = 15
+MOTOR5 = 16
+MOTOR6 = 17
+LIGHT1 = 18
+LIGHT2 = 19
+
+print("add local settings")
