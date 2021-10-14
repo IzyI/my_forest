@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "90b01751-1f6e-4ca5-9ee5-aba78a19d222",
+		"name": "PIN_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Off light",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/off_light?name=LIGHT1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"off_light"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIGHT1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "On light",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/on_light?name=LIGHT1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"on_light"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIGHT1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Off lock",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/off_lock?name=LIGHT1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"off_lock"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIGHT1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "On lock",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/on_lock?name=LIGHT1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"on_lock"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LIGHT1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "On motor",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/on_motor?name=MOTOR1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"on_motor"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "MOTOR1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Off motor",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/off_motor?name=MOTOR1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"off_motor"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "MOTOR1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/status",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"LIGHT2\",\n    \"cron\": \"20:00/23:00/0\",\n    \"lock\":1,\n     \"status\":0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/status",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
