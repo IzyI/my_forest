@@ -1,0 +1,13 @@
+[Unit]
+Description=my_forest_api
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/my_forest
+ExecStart=/root/my_forest/venv/bin/python -m uvicorn main:app --log-level critical --host 0.0.0.0
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

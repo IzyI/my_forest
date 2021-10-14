@@ -131,3 +131,6 @@ dmypy.json
 # Pycharm
 .idea/
 tmp/
+db
+db_activity
+db_backup

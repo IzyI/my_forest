@@ -25,5 +25,20 @@ class Status(Table):
                 0
             )
 
+    def update_status_name(self, name, status):
+        self.update(
+            {"name": name, "status": status}, name=name
+        )
+
+    def update_lock_name(self, name, lock):
+        self.update(
+            {"name": name, "lock": lock}, name=name
+        )
+
+    def update_cron_name(self, name, cron, lock, status):
+        self.update(
+            {"name": name, "cron": cron, "lock": lock, "status": status}, name=name
+        )
+
     def select_name(self, name):
         return self.select("*", name=name)
