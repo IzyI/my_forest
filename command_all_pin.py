@@ -3,7 +3,7 @@ import os
 import sys
 from demon.pinapi import BoardMachine
 
-status_pin = sys.argv[1]
+status_pin = int(sys.argv[1])
 if status_pin:
     BoardMachine.set_config_board()
     BoardMachine.all_pin_low()

@@ -10,7 +10,7 @@ LIGHT1 = None
 LIGHT2 = None
 VERSION = "1.0.0"
 
-DB = "/dev/shm/db"
+DB = "/dev/shm/db1"
 DB_ACTIVITY = "./db_activity"
 DB_BACKUP = "./db_backup"
 

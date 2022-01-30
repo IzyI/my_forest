@@ -134,3 +134,4 @@ tmp/
 db
 db_activity
 db_backup
+front/node_modules

@@ -1,6 +1,5 @@
 import logging
 import logging.config
-import coloredlogs
 import os
 import sys
 from settings import COLOR_CONSOLE, LEVEL_LOG, PATH_LOG
@@ -13,8 +12,6 @@ def setup_logging(filename="alog.log", default_level=logging.INFO, color_console
         format='[%(asctime)s] %(name)s[%(process)d] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s',
         datefmt='%H:%M:%S'
     )
-    if color_console:
-        coloredlogs.install(level=default_level, fmt='[%(asctime)s] %(name)s[%(process)d] %(levelname)s %(message)s')
     logging.getLogger("requests").setLevel(logging.ERROR)
     logging.getLogger("urllib3").setLevel(logging.ERROR)
 

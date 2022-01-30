@@ -8,7 +8,7 @@ import secrets
 from settings import USERNAME, PASSWORD
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
-
+from fastapi.staticfiles import StaticFiles
 
 def get_application() -> FastAPI:
     node = FastAPI()
@@ -28,7 +28,7 @@ def get_application() -> FastAPI:
     node.add_middleware(GZipMiddleware, minimum_size=1000)
     node.add_middleware(
         CORSMiddleware,
-        allow_origins=[],
+        allow_origins=["*"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -42,6 +42,14 @@ def get_application() -> FastAPI:
     #     response.headers["X-Process-Time"] = str(process_time)
     #     return response
 
+    # @node.get("/", tags=["html"], )
+    # def html():
+    #     return JSONResponse({"result": "pong"})
+    #
+    #
+    # node.mount("/css", StaticFiles(directory="front/dist/css"), name="static")
+
+
     @node.get("/ping", tags=["check"], )
     def ping():
         return JSONResponse({"result": "pong"})
@@ -51,6 +59,10 @@ def get_application() -> FastAPI:
         return JSONResponse({"version": VERSION})
 
     node.include_router(router, dependencies=[Depends(get_current_username)])
+
+    node.mount("/", StaticFiles(directory="/root/my_forest/front/dist", html=True), name="static")
+    node.mount("/js", StaticFiles(directory="/root/my_forest/front/dist/js", html=True), name="js")
+    node.mount("/css", StaticFiles(directory="/root/my_forest/front/dist/css", html=True), name="css")
     return node
 
 
